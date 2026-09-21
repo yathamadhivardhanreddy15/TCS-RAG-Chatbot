@@ -1,2 +1,11 @@
-# TCS-RAG-Chatbot
-A Retrieval-Augmented Generation (RAG) chatbot that answers questions from the TCS Annual Report using Python, LangChain, FAISS, HuggingFace Embeddings, and Ollama.
+# Project Workflow / Steps
+## Step 1 — Import Required Libraries
+
+### Imported the required Python libraries for PDF loading, text splitting, embeddings, and vector storage.
+
+#### Main libraries used:
+
+PyPDFLoader
+RecursiveCharacterTextSplitter
+HuggingFaceEmbeddings
+FAISS
