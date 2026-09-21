@@ -1,70 +1,69 @@
 # TCS Annual Report RAG Chatbot using Python, LangChain, FAISS, HuggingFace, and Ollama.
 
-## Project Workflow / Steps
-### Step 1: Import Required Libraries
+# Project Workflow / Steps
 
- Imported the required Python libraries for PDF loading, text splitting, embeddings, and vector storage.
+## Step 1: Import Required Libraries
 
-#### Main libraries used:
+   Imported the required Python libraries for PDF loading, text splitting, embeddings, and vector storage.
 
-PyPDFLoader
-RecursiveCharacterTextSplitter
-HuggingFaceEmbeddings
-FAISS
+### Main libraries used:
 
-### Step 2: Load the PDF
+   PyPDFLoader
+  
+   RecursiveCharacterTextSplitter
+  
+   HuggingFaceEmbeddings
+  
+   FAISS
 
-Loaded the TCS Annual Report PDF using PyPDFLoader.
+## Step 2: Load the PDF
 
-The PDF is converted into LangChain documents so that the content can be processed programmatically.
+   Loaded the TCS Annual Report PDF using PyPDFLoader.
 
-### Step 3: Split the Document into Chunks
+   The PDF is converted into LangChain documents so that the content can be processed programmatically.
 
-The large PDF document is divided into smaller text chunks using RecursiveCharacterTextSplitter.
+## Step 3: Split the Document into Chunks
 
-chunk_size = 2500
-chunk_overlap = 500
+   The large PDF document is divided into smaller text chunks using RecursiveCharacterTextSplitter.
 
-Chunking helps the system process and retrieve relevant information efficiently.
+    chunk_size = 2500
+    chunk_overlap = 500
 
-### Step 4: Generate Embeddings
-Converted the text chunks into numerical vector representations using HuggingFace Sentence Transformers.
+    Chunking helps the system process and retrieve relevant information efficiently.
 
-These embeddings capture the semantic meaning of the text.
+## Step 4: Generate Embeddings:
 
-### Step 5: Create FAISS Vector Store
+   Converted the text chunks into numerical vector representations using HuggingFace Sentence Transformers.
 
-Stored the document embeddings in a FAISS vector database.
+   These embeddings capture the semantic meaning of the text.
 
-FAISS is used to efficiently search for documents that are semantically similar to a user's question.
+## Step 5: Create FAISS Vector Store
 
-### Step 6: Perform Similarity Search
+   Stored the document embeddings in a FAISS vector database.
+   FAISS is used to efficiently search for documents that are semantically similar to a user's question.
 
-When a user asks a question, FAISS searches the vector database and retrieves the most relevant chunks.
+## Step 6: Perform Similarity Search
 
-results = vector_store.similarity_search(question, k=3)
+   When a user asks a question, FAISS searches the vector database and retrieves the most relevant chunks.
+   results = vector_store.similarity_search(question, k=3)
+   Here, k=3 retrieves the top three relevant chunks.
 
-Here, k=3 retrieves the top three relevant chunks.
+## Step 7: Build the Context
 
-### Step 7: Build the Context
+   The retrieved chunks are combined to create a context for the Large Language Model (LLM).
+   Only the relevant information retrieved from the PDF is passed to the prompt.
 
-The retrieved chunks are combined to create a context for the Large Language Model (LLM).
+## Step 8: Create the RAG Prompt
 
-Only the relevant information retrieved from the PDF is passed to the prompt.
+   Created a prompt that instructs the LLM to answer the question using the retrieved context.
+   The model is instructed not to use outside knowledge when answering the question.
 
-### Step 8: Create the RAG Prompt
+## Step 9: Generate the Final Answer using Ollama
 
-Created a prompt that instructs the LLM to answer the question using the retrieved context.
+   Connected the RAG pipeline to a local LLM using Ollama.
+   The retrieved context and user question are sent to the local Llama model, which generates the final answer.
 
-The model is instructed not to use outside knowledge when answering the question.
-
-### Step 9: Generate the Final Answer using Ollama
-
-Connected the RAG pipeline to a local LLM using Ollama.
-
-The retrieved context and user question are sent to the local Llama model, which generates the final answer.
-
-#### This approach allows the project to run locally without requiring an OpenAI API key.
+### This approach allows the project to run locally without requiring an OpenAI API key.
 
 ## RAG Architecture:
 
@@ -97,24 +96,26 @@ The retrieved context and user question are sent to the local Llama model, which
                                                                ↓
                                                           Final Answer**
 
-#### Technologies Used:
-   Python
+### Technologies Used:
+     
+     Python
    
-   Jupyter Notebook
+    Jupyter Notebook
    
-   LangChain
+    LangChain
    
-   PyPDF
+    PyPDF
    
-   HuggingFace Sentence Transformers
+    HuggingFace Sentence Transformers
    
-   FAISS
+    FAISS
    
-   Ollama
+    Ollama
    
-   Llama 3.2
+    Llama 3.2
    
- ## Key Features:
+ ### Key Features:
+ 
    PDF document question answering
    
    Retrieval-Augmented Generation (RAG)
