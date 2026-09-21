@@ -98,20 +98,25 @@ The retrieved context and user question are sent to the local Llama model, which
                                                           Final Answer**
 
 #### Technologies Used:
-   **Python
-   Jupyter Notebook
-   LangChain
-   PyPDF
-   HuggingFace Sentence Transformers
-   FAISS
+   Python,
+   Jupyter Notebook,
+   LangChain,
+   PyPDF,
+   HuggingFace Sentence Transformers,
+   FAISS,
    Ollama
-   Llama 3.2
-   Key Features
+   Llama 3.2,
+ ## Key Features:
    PDF document question answering
+   
    Retrieval-Augmented Generation (RAG)
+   
    Semantic similarity search
+   
    Vector database using FAISS
+   
    HuggingFace embeddings
+   
    Local LLM using Ollama**
 
 No OpenAI API key required for final response generation
