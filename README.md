@@ -69,7 +69,6 @@ The retrieved context and user question are sent to the local Llama model, which
 ##### RAG Architecture
 
 TCS Annual Report PDF
-
         ↓    
     PyPDFLoader
     
