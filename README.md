@@ -98,14 +98,22 @@ The retrieved context and user question are sent to the local Llama model, which
                                                           Final Answer**
 
 #### Technologies Used:
-   Python,
-   Jupyter Notebook,
-   LangChain,
-   PyPDF,
-   HuggingFace Sentence Transformers,
-   FAISS,
+   Python
+   
+   Jupyter Notebook
+   
+   LangChain
+   
+   PyPDF
+   
+   HuggingFace Sentence Transformers
+   
+   FAISS
+   
    Ollama
-   Llama 3.2,
+   
+   Llama 3.2
+   
  ## Key Features:
    PDF document question answering
    
@@ -122,6 +130,6 @@ The retrieved context and user question are sent to the local Llama model, which
 No OpenAI API key required for final response generation
 
 ## Project Outcome:
-The completed system can retrieve relevant information from the TCS Annual Report and generate context-based answers to user questions using a local LLM.
+     
+     The completed system can retrieve relevant information from the TCS Annual Report and generate context-based answers to user questions using a local LLM.
 
-The completed system can retrieve relevant information from the TCS Annual Report and generate context-based answers to user questions using a local LLM.
