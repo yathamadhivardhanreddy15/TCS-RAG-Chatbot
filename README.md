@@ -66,24 +66,34 @@ The retrieved context and user question are sent to the local Llama model, which
 
 #### This approach allows the project to run locally without requiring an OpenAI API key.
 
-RAG Architecture
+##### RAG Architecture
+
 TCS Annual Report PDF
-        ↓
+
+        ↓    
     PyPDFLoader
+    
         ↓
    Text Chunking
-        ↓
+   
+        ↓ 
 HuggingFace Embeddings
+
         ↓
    FAISS Vector Store
+   
         ↓
   Similarity Search
+  
         ↓
  Relevant Context
+ 
         ↓
     RAG Prompt
+    
         ↓
    Ollama LLM
+   
         ↓
     Final Answer
 
