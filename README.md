@@ -68,33 +68,33 @@ The retrieved context and user question are sent to the local Llama model, which
 
 ##### RAG Architecture
 
-TCS Annual Report PDF
-        ↓    
-    PyPDFLoader
+      TCS Annual Report PDF
+              ↓    
+         PyPDFLoader
     
-        ↓
-   Text Chunking
+              ↓
+        Text Chunking
    
-        ↓ 
-HuggingFace Embeddings
+              ↓ 
+     HuggingFace Embeddings
 
-        ↓
-   FAISS Vector Store
+              ↓
+     FAISS Vector Store
    
-        ↓
-  Similarity Search
+              ↓
+     Similarity Search
   
-        ↓
- Relevant Context
+             ↓
+     Relevant Context
  
-        ↓
-    RAG Prompt
+             ↓
+        RAG Prompt
     
-        ↓
-   Ollama LLM
+             ↓
+        Ollama LLM
    
-        ↓
-    Final Answer
+             ↓
+       Final Answer
 
 #### Technologies Used:
 Python
